@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Dearest Kismis Didi ✨🕊️🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Parisienne&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --white-pure: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+      padding: 10px 0;
+      transition: background 1.5s ease-in-out;
+    }
+
+    /* 15 Serene, Soulful & Ethereal Themes */
+    body.theme-1 { background: radial-gradient(ellipse at center, #35213d 0%, #1c0e21 50%, #0a040d 100%); }
+    body.theme-2 { background: radial-gradient(ellipse at center, #1b263b 0%, #0d1b2a 50%, #050b12 100%); }
+    body.theme-3 { background: radial-gradient(ellipse at center, #3d2b3d 0%, #221426 50%, #0d0610 100%); }
+    body.theme-4 { background: radial-gradient(ellipse at center, #142834 0%, #0d1921 50%, #04080a 100%); }
+    body.theme-5 { background: radial-gradient(ellipse at center, #3d1e2e 0%, #240f1a 50%, #0e050a 100%); }
+    body.theme-6 { background: radial-gradient(ellipse at center, #263847 0%, #15222d 50%, #080d12 100%); }
+    body.theme-7 { background: radial-gradient(circle at 35% 30%, #4a3e56 0%, #21192b 55%, #0a070f 100%); }
+    body.theme-8 { background: radial-gradient(circle at 65% 30%, #30415d 0%, #192231 55%, #070a0f 100%); }
+    body.theme-9 { background: radial-gradient(ellipse at bottom, #392b47 0%, #1e1526 60%, #09060d 100%); }
+    body.theme-10 { background: radial-gradient(circle at center, #324a5f 0%, #1b2a37 55%, #070d12 100%); }
+    body.theme-11 { background: radial-gradient(circle at top left, #3d354a 0%, #1f1a26 55%, #09070d 100%); }
+    body.theme-12 { background: radial-gradient(ellipse at bottom, #44323b 0%, #24181d 60%, #0b0709 100%); }
+    body.theme-13 { background: radial-gradient(circle at 50% 50%, #2b3a4a 0%, #151e27 65%, #06090c 100%); }
+    body.theme-14 { background: radial-gradient(circle at center, #243b38 0%, #12211f 55%, #050a09 100%); }
+    body.theme-15 { background: radial-gradient(ellipse at top, #2e2640 0%, #181324 65%, #07050b 100%); }
+
+    #sparkleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      pointer-events: auto;
+      width: 94%;
+      max-width: 450px;
+      margin: auto;
+    }
+
+    /* Floating Quotes Grid */
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .heart-quote-badge {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      border-radius: 15px;
+      padding: 8px 10px;
+      font-size: 0.7rem;
+      text-align: center;
+      line-height: 1.35;
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+      animation: floatBadge 4s ease-in-out infinite alternate;
+    }
+
+    .heart-quote-badge:nth-child(2) {
+      animation-delay: 1.2s;
+    }
+
+    @keyframes floatBadge {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-5px) scale(1.02); }
+    }
+
+    /* Seamless Interface View */
+    .interface-view {
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: fadeInContent 0.8s ease;
+    }
+
+    @keyframes fadeInContent {
+      0% { opacity: 0; transform: scale(0.97) translateY(10px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .title-main {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 1.38rem;
+      background: linear-gradient(45deg, #ffffff, #f5d6ce, #ffe57f, #e8d0d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      line-height: 1.25;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7), 0 0 16px rgba(255, 229, 127, 0.3);
+    }
+
+    .cursive-text {
+      font-family: 'Parisienne', 'Great Vibes', cursive;
+      font-size: 1.95rem;
+      color: #f7e6ea;
+      margin: 8px 0;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85), 0 0 16px rgba(255, 215, 225, 0.45);
+    }
+
+    .handwritten-text {
+      font-family: 'Caveat', cursive;
+      font-size: 1.26rem;
+      color: #ffe57f;
+      line-height: 1.4;
+      margin: 10px 0;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 12px rgba(255, 229, 127, 0.6);
+      letter-spacing: 0.3px;
+    }
+
+    .message-body {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #ffffff;
+      margin: 12px 0;
+      font-weight: 500;
+      padding: 0 8px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 3px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .apology-highlight {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 1.55rem;
+      font-weight: 900;
+      background: linear-gradient(45deg, #ffffff, #ffe57f, #ffb8b8, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin: 10px 0;
+      line-height: 1.25;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.75), 0 0 22px rgba(255, 229, 127, 0.7);
+      animation: pulseHighlight 2.5s infinite alternate;
+    }
+
+    @keyframes pulseHighlight {
+      0% { transform: scale(1); filter: brightness(1); }
+      100% { transform: scale(1.03); filter: brightness(1.2); }
+    }
+
+    .card-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 14px rgba(255, 229, 127, 0.7);
+      margin: 12px auto;
+      display: block;
+      animation: pulseGlow 3s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+      100% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.85), 0 0 18px rgba(255, 229, 127, 0.8); }
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, #6a4c6d, #8f5c78, #b86b77);
+      color: #ffffff;
+      border: none;
+      outline: none;
+      padding: 12px 26px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(184, 107, 119, 0.45);
+      margin-top: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+
+    .btn-main:active {
+      transform: scale(0.96);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1.5px solid rgba(255, 255, 255, 0.55);
+      color: #f7e6ea;
+      padding: 10px 22px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 8px 5px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      transition: background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Falling Petals Animation */
+    .falling-petal {
+      position: fixed;
+      top: -10vh;
+      z-index: 9999;
+      pointer-events: none;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 1; }
+      50% { transform: translate3d(25px, 50vh, 0) rotate(180deg); opacity: 0.85; }
+      100% { transform: translate3d(-25px, 110vh, 0) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="theme-1">
+  <canvas id="sparkleCanvas"></canvas>
+
+  <audio id="bgMusic1" preload="auto">
+    <source src="song1.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="bgMusic2" preload="auto">
+    <source src="song2.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <div class="quotes-grid">
+      <div class="heart-quote-badge">
+        🕊️ <em>"No misunderstanding can ever shake the deep respect I hold for you."</em>
+      </div>
+      <div class="heart-quote-badge">
+        🤍 <em>"You have always guided me with grace; I never meant to cause you pain."</em>
+      </div>
+    </div>
+
+    <!-- Interface 1 -->
+    <div id="interface1" class="interface-view">
+      <h1 class="title-main">To My Kismis Didi ✨</h1>
+      <div class="cursive-text">From the Quietest Corner of My Heart 🌙</div>
+      <div class="handwritten-text">"Your smile and guidance mean the absolute world to me."</div>
+      <p class="message-body">
+        Didi, sometimes through silly words, thoughtless reactions, or mere misunderstandings, I end up hurting the very person who always wishes the best for me. Looking back, I truly feel heavy realizing my shortcomings, and I want nothing more than to clear any ache between us.
+      </p>
+      <button class="btn-main" onclick="goToInterface2()">Hear My Heart, Didi ✨🕊️</button>
+    </div>
+
+    <!-- Interface 2 -->
+    <div id="interface2" class="interface-view hidden">
+      <h1 class="title-main">Owning My Actions ✨</h1>
+      <div class="cursive-text">A Sincere Confession 🌸</div>
+      <div class="handwritten-text">"You've guided me so gently; making you sad breaks my own spirit."</div>
+      <p class="message-body">
+        Kismis Didi, I never wanted to cause you distress or make you feel taken for granted. You have always been my guardian, my sweetest mentor, and a source of quiet strength. I take complete responsibility for my words and mistakes without making any excuses.
+      </p>
+      <button class="btn-main" onclick="goToInterface3()">Next Thought ✨</button>
+    </div>
+
+    <!-- Interface 3 -->
+    <div id="interface3" class="interface-view hidden">
+      <h1 class="title-main">Treasured Bond ✨</h1>
+      <div class="cursive-text">Always My Dearest Didi 🤍</div>
+      
+      <img src="photo.jpg" alt="Kismis Didi" class="card-photo" onerror="this.style.display='none'" />
+
+      <div class="handwritten-text">"A single cloudy day cannot wipe away all our years of shared laughter."</div>
+      <p class="message-body">
+        Every lesson you taught me, every comforting word in difficult times, and your presence in my life are treasures I keep protected. I know trust and calm take time to heal, but my earnest wish is to see your bright, peaceful smile return.
+      </p>
+      <button class="btn-main" onclick="openFinalScreen()">Open Final Message 🌙</button>
+    </div>
+
+    <!-- Interface 4 -->
+    <div id="finalScreen" class="interface-view hidden">
+      <span class="apology-highlight">✨ I AM TRULY SORRY, DIDI ✨</span>
+      <div class="cursive-text">Wishing for Your Peace & Smile 🕊️</div>
+      <div class="handwritten-text">"Thank you for being my constant support. Please forgive your little one."</div>
+      <p class="message-body">
+        Take all the time and calm you need, Didi. I just wanted to leave this genuine apology here so you know you will always hold an irreplaceable, honored place in my life.
+      </p>
+      <button class="btn-secondary" onclick="exitJourney()">Wishing you peace, Didi... 🌸</button>
+    </div>
+  </div>
+
+  <script>
+    const music1 = document.getElementById('bgMusic1');
+    const music2 = document.getElementById('bgMusic2');
+
+    // Exact Timestamps (in seconds)
+    const song1Start = 163; // 2:43
+    const song1End = 182;   // 3:02
+
+    // Final Screen song
+    const song2Start = 90;  // 1:30
+
+    let isSong1Playing = false;
+
+    function getRandomTheme() {
+      return Math.floor(Math.random() * 15) + 1;
+    }
+
+    function applyRandomTheme() {
+      document.body.className = 'theme-' + getRandomTheme();
+    }
+
+    function goToInterface2() {
+      if (!isSong1Playing && music1) {
+        music1.currentTime = song1Start;
+        music1.play().catch(e => console.log('Song 1 playback:', e));
+        isSong1Playing = true;
+
+        music1.ontimeupdate = () => {
+          if (music1.currentTime >= song1End) {
+            music1.currentTime = song1Start;
+          }
+        };
+      }
+      applyRandomTheme();
+      document.getElementById('interface1').classList.add('hidden');
+      document.getElementById('interface2').classList.remove('hidden');
+    }
+
+    function goToInterface3() {
+      applyRandomTheme();
+      document.getElementById('interface2').classList.add('hidden');
+      document.getElementById('interface3').classList.remove('hidden');
+    }
+
+    function openFinalScreen() {
+      if (music1) {
+        music1.pause();
+        music1.ontimeupdate = null;
+        isSong1Playing = false;
+      }
+      if (music2) {
+        music2.currentTime = song2Start;
+        music2.play().catch(e => console.log('Song 2 playback:', e));
+      }
+      applyRandomTheme();
+      document.getElementById('interface3').classList.add('hidden');
+      document.getElementById('finalScreen').classList.remove('hidden');
+    }
+
+    function createPetalShower() {
+      const petals = ['🤍', '🕊️', '🌸', '✨', '🌷'];
+      for (let i = 0; i < 70; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('falling-petal');
+        petal.innerText = petals[Math.floor(Math.random() * petals.length)];
+        petal.style.left = (Math.random() * 100) + 'vw';
+        petal.style.animationDuration = (Math.random() * 1.5 + 2) + 's';
+        petal.style.fontSize = (Math.random() * 15 + 15) + 'px';
+        document.body.appendChild(petal);
+      }
+    }
+
+    function exitJourney() {
+      createPetalShower();
+      setTimeout(() => {
+        window.open('https://www.google.com', '_blank');
+        window.close();
+        window.location.href = "about:blank";
+      }, 2000);
+    }
+
+    // Canvas Background Engine
+    const canvas = document.getElementById('sparkleCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // 16 Soft Serene Fluttering Butterflies
+    const butterflyHues = [330, 280, 210, 45];
+
+    class Butterfly {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + 20 + Math.random() * 80;
+        this.size = 11 + Math.random() * 8;
+        this.vx = (Math.random() - 0.5) * 1.5;
+        this.vy = -(1.1 + Math.random() * 1.3);
+        this.wingAngle = Math.random() * Math.PI * 2;
+        this.wingSpeed = 0.16 + Math.random() * 0.12;
+        this.hue = butterflyHues[Math.floor(Math.random() * butterflyHues.length)];
+        this.sparkleTimer = 0;
+      }
+
+      update() {
+        this.x += this.vx + Math.sin(this.y * 0.02) * 0.85;
+        this.y += this.vy;
+        this.wingAngle += this.wingSpeed;
+
+        this.sparkleTimer++;
+        if (this.sparkleTimer % 6 === 0 && particles.length < 65) {
+          particles.push(new Sparkle(this.x, this.y, `hsl(${this.hue}, 85%, 78%)`));
+        }
+
+        if (this.y < -50 || this.x < -50 || this.x > canvas.width + 50) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        const wingScale = Math.abs(Math.sin(this.wingAngle));
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.fillStyle = `hsl(${this.hue}, 80%, 75%)`;
+        ctx.shadowColor = `hsl(${this.hue}, 90%, 70%)`;
+        ctx.shadowBlur = 12;
+
+        // Left Wing
+        ctx.beginPath();
+        ctx.ellipse(-this.size * 0.6 * wingScale, 0, this.size * 0.8 * wingScale, this.size * 0.5, -0.2, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Right Wing
+        ctx.beginPath();
+        ctx.ellipse(this.size * 0.6 * wingScale, 0, this.size * 0.8 * wingScale, this.size * 0.5, 0.2, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Body
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 1.4, this.size * 0.45, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.restore();
+      }
+    }
+
+    // Floating Glowing Soft Embers / Little Hearts
+    class Heart {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + 20 + Math.random() * 50;
+        this.size = 6 + Math.random() * 8;
+        this.vy = -(0.6 + Math.random() * 0.8);
+        this.vx = (Math.random() - 0.5) * 0.6;
+        this.color = Math.random() > 0.5 ? '#f5cd79' : '#f8a5c2';
+        this.alpha = 0.4 + Math.random() * 0.5;
+      }
+
+      update() {
+        this.y += this.vy;
+        this.x += this.vx + Math.sin(this.y * 0.03) * 0.4;
+        if (this.y < -30) this.reset();
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+        
+        ctx.beginPath();
+        const topCurveHeight = this.size * 0.3;
+        ctx.moveTo(0, topCurveHeight);
+        ctx.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
+        ctx.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, this.size, 0, this.size);
+        ctx.bezierCurveTo(0, this.size, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
+        ctx.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    // Sparkles
+    class Sparkle {
+      constructor(x, y, color = '#fef1df') {
+        this.x = x || Math.random() * canvas.width;
+        this.y = y || Math.random() * canvas.height;
+        this.size = Math.random() * 2.4 + 0.8;
+        this.alpha = 1;
+        this.fade = 0.014 + Math.random() * 0.02;
+        this.color = color;
+      }
+
+      update() {
+        this.alpha -= this.fade;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, this.alpha);
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    const butterflies = Array.from({ length: 16 }, () => new Butterfly());
+    const hearts = Array.from({ length: 14 }, () => new Heart());
+    const particles = [];
+
+    // Ambient Twinkling Stars
+    const ambientStars = Array.from({ length: 85 }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      size: Math.random() * 2.8 + 1.0, 
+      alpha: Math.random() * Math.PI * 2,
+      speed: 0.015 + Math.random() * 0.02, 
+      isGold: Math.random() > 0.65
+    }));
+
+    // Throttled 45 FPS Animation Loop
+    let lastFrameTime = 0;
+    const targetInterval = 1000 / 45;
+
+    function animate(currentTime) {
+      requestAnimationFrame(animate);
+
+      const delta = currentTime - lastFrameTime;
+      if (delta < targetInterval) return;
+      lastFrameTime = currentTime - (delta % targetInterval);
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Ambient Twinkling Stars
+      ambientStars.forEach(star => {
+        star.alpha += star.speed;
+        const currentAlpha = (Math.sin(star.alpha) + 1) / 2;
+        ctx.fillStyle = star.isGold 
+          ? `rgba(255, 229, 127, ${currentAlpha * 0.95})` 
+          : `rgba(248, 239, 240, ${currentAlpha * 0.95})`;
+        ctx.shadowColor = star.isGold ? '#ffe57f' : '#f8a5c2';
+        ctx.shadowBlur = 14; 
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Floating Hearts
+      hearts.forEach(h => {
+        h.update();
+        h.draw();
+      });
+
+      // Sparkles
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw();
+        if (particles[i].alpha <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+
+      // Butterflies
+      butterflies.forEach(b => {
+        b.update();
+        b.draw();
+      });
+    }
+
+    // Set initial random theme on load
+    applyRandomTheme();
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
